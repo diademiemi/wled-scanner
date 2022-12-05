@@ -1,0 +1,14 @@
+wled_ip: wled.local
+wled_led_count: 500
+wled_scan_delay: 0.1
+camera_index: 0
+
+angles:
+  - 0
+  - 45
+  - 90
+  - 135
+  - 180
+  - 225
+  - 270
+  - 315
