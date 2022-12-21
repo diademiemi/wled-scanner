@@ -1,3 +1,4 @@
 PyYaml
 requests
 opencv-python
+matplotlib

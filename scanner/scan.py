@@ -5,6 +5,8 @@ import cv2
 from scanner import config
 from scanner.wled import WLED
 
+ANGLES = [0, 90, 180, 270]
+
 
 def init():
     # Get amount of LEDs to scan
@@ -26,7 +28,6 @@ def init():
 
 
 def take_picture(index, angle):
-
     # Turn on LED
     result = wled.set_led(index)
     if result.json() != {'success': True}:
@@ -80,8 +81,7 @@ def scan_angle(angle):
 
 
 def scan_from(start_at):
-    angles = config.get_config().get("angles")
-    for angle in angles:
+    for angle in ANGLES:
         if int(angle) < start_at:
             continue
         print(f'Scanning angle {angle}')
